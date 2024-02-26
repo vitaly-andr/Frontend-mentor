@@ -1,0 +1,104 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Recreating Codepen!
+    link(href="styles/Drumkit.scss" rel="stylesheet")
+
+  body
+      .box 1
+        .dragMe(draggable='true') Drag Me Please!
+      .box 2
+      // The .keys div acts as a container for all key elements
+      .keys
+        // Each .key div represents a specific musical key with a data attribute for the key code
+        // Data attribute for 'A' key
+
+        .key(data-key="65")
+          // The keyboard button element showing the key letter
+
+          kbd A
+          // A span with class 'sound' for displaying the sound name
+ 
+          span.sound clap 
+        // Repeating the structure for different keys with their respective data attributes and sounds
+        // Data attribute for 'S' key
+
+        .key(data-key="83")
+          kbd S
+          span.sound hihat
+
+        .key(data-key="68")
+          kbd D
+          span.sound kick
+
+        .key(data-key="70")
+          kbd F
+          span.sound openhat
+
+        .key(data-key="71")
+          kbd G
+          span.sound boom
+
+        .key(data-key="72")
+          kbd H
+          span.sound ride
+
+        .key(data-key="74")
+          kbd J
+          span.sound snare
+
+        .key(data-key="75")
+          kbd K
+          span.sound tom
+
+        .key(data-key="76")
+          kbd L
+          span.sound tink
+      audio(data-key="65" src="assets/clap.wav")
+      audio(data-key="83" src="assets/hihat.wav")
+      audio(data-key="68" src="assets/kick.wav")
+      audio(data-key="70" src="assets/openhat.wav")
+      audio(data-key="71" src="assets/boom.wav")
+      audio(data-key="72" src="assets/ride.wav")
+      audio(data-key="74" src="assets/snare.wav")
+      audio(data-key="75" src="assets/tom.wav")
+      audio(data-key="76" src="assets/tink.wav")
+      .buttons.grid.grid-cols-2.gap-4.mb-8.place-items-center
+        .button.bg-red-500.text-white.font-bold.py-2.px-4.rounded-full.w-28 Button 1
+        .button.bg-red-500.text-white.font-bold.py-2.px-4.rounded-full.w-28 Button 2
+
+
+script.
+  // Select all key elements
+  const keys = document.querySelectorAll('.key');
+
+  // Function to remove the 'playing' class
+  function removeTransition(e) {
+    // Skip it if it's not a transform
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+  }
+
+  // Add event listener to each key
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  const buttons = document.querySelectorAll('.button');
+  console.log(buttons); // Check if buttons are correctly selected
+  buttons.forEach(button => {
+    button.addEventListener('click', function(event) {
+        console.log(event.target.innerText);
+    });
+  });
+
+  // Keydown event listener to play sound and add visual effect
+  window.addEventListener('keydown', function(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    if (!audio) return; // Stop the function if no audio is found for the key
+    audio.currentTime = 0; // Rewind to the start
+    audio.play();
+    key.classList.add('playing'); // Add visual effect to key
+  });
+  
+

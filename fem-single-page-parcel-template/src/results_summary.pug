@@ -1,0 +1,109 @@
+doctype html
+html.antialiased.overflow-x-hidden(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(name="theme-color" content="#0B0D17")
+        meta(name="author" content="<your name> - implementation, frontendmentor.io - design")
+        meta(name="description" content="A solution to the frontendmentor.io <insert challenge name> challenge")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png")
+        //- Uncomment below for fonts
+        link(href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet")
+        //- Uncomment below to include CSS after writing semantic HTML
+        link(href="styles/results_summary.scss" rel="stylesheet")
+        title(Frontend Mentor | Results summary component)
+
+                    //- div.flex.flex-col.items-center.justify-center.w-full
+                    //-     span.flex.items-center.justify-center.w-full.text-center
+                    //-     span.flex.items-center.justify-center.w-full.text-center
+                    //-   .wrapper_score.flex.flex-col.w-full.h-full.items-center.justify-center
+//-    .aspect-w-10.aspect-h-7
+
+body(class="bg-[hsl(200,100%,96%)]")
+    .container.flex.mx-auto(class="w-[375px] xs:w-[736px] min-h-[512px]")
+        .all_wrapper.rounded-3xl.bg-white.flex.flex-col.flex-grow(class="xs:shadow-2xl xs:mt-5")
+            .grid(class="grid-cols-1 sm:grid-cols-2 flex-grow")
+                .all_wrapper__result.rounded-b-3xl.flex-col.flex.items-center.justify-between(class={"xs:rounded-3xl": true} style="background: linear-gradient(to top, hsla(241, 81%, 54%, 1), hsla(252, 100%, 63%, 1));")
+                    h2.mt-8.mb-6.font-hanken.font-hanken-bold.text-xl(class="text-[hsl(241,100%,89%)]") Your Result
+                    .circle-gradient-bg.mb-6.w-52.h-52.rounded-full.flex-col.flex.items-center.justify-center(style="background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(256, 72%, 46%, 0));")
+                        .result.font-hanken.font-hanken-extrabold.text-6xl.leading-none.text-white 76
+                        .total.font-hanken.text-lg.leading-none.text-white of 100
+                    h2.mb-2.font-hanken.font-hanken-bold.text-3xl.text-white Great
+                    p.mb-4.w-56.text-center(class="text-[hsl(241,100%,89%)]") You scored higher than 65% of the people who have taken these tests.
+                .wrapper.flex-col.flex.items-center.justify-evenly
+                    div(class="flex items-center w-60")
+                        h2.mt-8.mb-6.font-hanken.font-hanken-bold.text-xl.self-start Summary
+                    //- div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(0,100%,67%)]")
+                    //-     div.flex.items-center
+                    //-         div.flex.items-center
+                    //-             img(src='./assets/images/icon-reaction.svg' alt='reaction icon' class="w-4 h-4 mr-2")
+                    //-         div(class="text-[hsl(0,100%,67%)]") Reaction
+                    //-     div 80 
+                    //-         span(class="text-[hsla(223,30%,27%,50%)]") / 100
+                    //- div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(0,100%,67%)]")
+                    //-     div.flex.items-center
+                    //-         div.flex.items-center
+                    //-             img(src='./assets/images/icon-reaction.svg' alt='reaction icon' class="w-4 h-4 mr-2")
+                    //-         div(class="text-[hsl(0,100%,67%)]") Reaction
+                    //-     div 80 
+                    //-         span(class="text-[hsla(223,30%,27%,50%)]") / 100
+                    //- div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(0,100%,67%)]")
+                    //-     div.flex.items-center
+                    //-         div.flex.items-center
+                    //-             img(src='./assets/images/icon-reaction.svg' alt='reaction icon' class="w-4 h-4 mr-2")
+                    //-         div(class="text-[hsl(0,100%,67%)]") Reaction
+                    //-     div 80 
+                    //-         span(class="text-[hsla(223,30%,27%,50%)]") / 100
+                    //- div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(0,100%,67%)]")
+                    //-     div.flex.items-center
+                    //-         div.flex.items-center
+                    //-             img(src='./assets/images/icon-reaction.svg' alt='reaction icon' class="w-4 h-4 mr-2")
+                    //-         div(class="text-[hsl(0,100%,67%)]") Reaction
+                    //-     div 80 
+                    //-         span(class="text-[hsla(223,30%,27%,50%)]") / 100
+                    //- div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(0,100%,67%)]")
+                    //-     div.flex.items-center
+                    //-         div.flex.items-center
+                    //-             img(src='./assets/images/icon-reaction.svg' alt='reaction icon' class="w-4 h-4 mr-2")
+                    //-         div(class="text-[hsl(0,100%,67%)]") Reaction
+                    //-     div 80 
+                    //-         span(class="text-[hsla(223,30%,27%,50%)]") / 100
+                    div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(0,100%,67%)]")
+                        div.flex.items-center
+                            div.flex.items-center
+                                img(src='./assets/images/icon-reaction.svg' alt='reaction icon' class="w-4 h-4 mr-2")
+                            div(class="text-[hsl(0,100%,67%)]") Reaction
+                        div 80 
+                            span(class="text-[hsla(223,30%,27%,50%)]") / 100
+
+                    div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(39,100%,56%)]")
+                        div.flex.items-center
+                            div.flex.items-center
+                                img(src='./assets/images/icon-memory.svg' alt='memory icon' class="w-4 h-4 mr-2")
+                            div(class="text-[hsl(39,100%,56%)]") Memory
+                        div 92 
+                            span(class="text-[hsla(223,30%,27%,50%)]") / 100
+                    div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(166,100%,37%)]")
+                        div.flex.items-center
+                            div.flex.items-center
+                                img(src='./assets/images/icon-verbal.svg' alt='verbal icon' class="w-4 h-4 mr-2")
+                            div(class="text-[hsl(166,100%,37%)]") Verbal
+                        div 61
+                            span(class="text-[hsla(223,30%,27%,50%)]")  / 100
+                    div(class="wrapper mb-4 p-4 flex-row flex items-center justify-between w-60 h-12 bg-opacity-5 rounded-lg bg-[hsl(234,85%,45%)]")
+                        div.flex.items-center
+                            div.flex.items-center
+                                img(src='./assets/images/icon-verbal.svg' alt='verbal icon' class="w-4 h-4 mr-2")
+                            div(class="text-[hsl(234,85%,45%)]") Visual
+                        div 72 
+                            span(class="text-[hsla(223,30%,27%,50%)]")  / 100
+
+                    button.font-hanken-bold.rounded-3xl.mb-4.text-white.w-60.h-12.cursor-pointer.button-bg.button-hover Continue
+        
+    .attribution.mb-8
+        | Challenge by 
+        a(href="https://www.frontendmentor.io?ref=challenge", target="_blank") Frontend Mentor
+        | . Coded by 
+        a(href="#") Vitaly Andrianov
