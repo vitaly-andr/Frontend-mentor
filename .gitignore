@@ -1,0 +1,22 @@
+# Avoid accidental upload of the Sketch, Figma, and Adobe XD design files
+*.sketch
+*.fig
+*.xd
+
+# System files
+.DS_Store
+
+# Configuration files
+.prettierignore
+
+# Exclude all zip files
+*.zip
+
+# But track specific zip files (uncomment if needed)
+
+# Ignored directories
+results-summary-component-main/
+results-summary-component-figma/
+QR code challenge/
+creative-single-page-site-figma/
+creative-single-page-site/
