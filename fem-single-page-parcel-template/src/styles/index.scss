@@ -15,7 +15,7 @@
         & > li {
             @apply
             flex
-            p-12
+            p-6 md:p-12
             text-left
             bg-[--bg-color]
             font-lexend
@@ -23,15 +23,15 @@
 
             & > article {
                 @apply
-                flex flex-col h-full
+                flex flex-col
                 justify-between items-start
-                gap-12
+                gap-4 md:gap-12
                 ;
 
                 & > section {
                     @apply
                     flex flex-col
-                    gap-6
+                    gap-2 md:gap-6
                     ;
 
                     & > img {
@@ -48,6 +48,7 @@
                         @apply
                         max-w-[23ch]
                         leading-relaxed
+                        text-sm md:text-base
                         text-[hsla(0,0%,100%,0.75)]
                         mb-4;
                     }
