@@ -15,17 +15,23 @@
         & > li {
             @apply
             flex
-            p-8
+            p-12
+            text-left
+            bg-[--bg-color]
+            font-lexend
             ;
 
             & > article {
                 @apply
                 flex flex-col h-full
-                justify-between items-start;
+                justify-between items-start
+                gap-12
+                ;
 
                 & > section {
                     @apply
-                    flex flex-col justify-start
+                    flex flex-col
+                    gap-6
                     ;
 
                     & > img {
@@ -34,22 +40,26 @@
 
                     & > h2 {
                         @apply
-                        mb-4 text-3xl font-bold text-left text-white
+                        mb-4 text-4xl font-bold text-white
                         uppercase font-big-shoulder
                     }
 
                     & > p {
                         @apply
-                        max-w-[25ch]
-                        text-xs leading-relaxed
-                        text-teal-100 text-left font-lexend
+                        max-w-[23ch]
+                        leading-relaxed
+                        text-[hsla(0,0%,100%,0.75)]
                         mb-4;
                     }
                 }
 
                 & > button {
                     @apply
-                    px-4 py-2 rounded-full bg-gray-100/50 ;
+                    px-8 py-3
+                    bg-white
+                    text-[--bg-color] font-medium
+                    tracking-tight
+                    rounded-full ;
                 }
             }
         }
