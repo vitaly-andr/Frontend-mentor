@@ -10,13 +10,51 @@
 
 //Example component for buttons
 @layer components {
-//     .codepen {
-//       @apply 
-        
-//         ;  
 
-//     }
-// 
+    .__car_type {
+        @apply
+            flex
+            p-8
+            first:rounded-t-lg last:rounded-b-lg
+            md:first:rounded-tr-none md:last:rounded-bl-none
+            md:first:rounded-l-lg md:last:rounded-r-lg
+            ;
+
+        & > article {
+            @apply
+                flex flex-col h-full
+                justify-between items-start;
+
+            & > section {
+                @apply
+                    flex flex-col justify-start
+                ;
+
+                & > img {
+                    @apply w-16 order-first;
+                }
+
+                & > h2 {
+                    @apply
+                        mb-4 text-3xl font-bold text-left text-white
+                        uppercase font-big-shoulder
+                }
+
+                & > p {
+                  @apply
+                    max-w-[25ch]
+                    text-xs leading-relaxed
+                    text-teal-100 text-left font-lexend
+                    mb-4;
+                }
+            }
+
+            & > button {
+                @apply
+                px-4 py-2 rounded-full bg-gray-100/50 ;
+            }
+        }
+    }
 }
 
 .codepen {
